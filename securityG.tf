@@ -1,7 +1,7 @@
 //////////////// Sec Group //////////////
 
 resource "azurerm_network_security_group" "app_nsg" {
-  name                = "app-nsg"
+  name                = "app-nsgxx"
   location            = var.rg_region
   resource_group_name = var.rg_name
 
