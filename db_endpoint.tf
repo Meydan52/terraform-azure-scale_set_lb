@@ -1,4 +1,5 @@
 # Private endpoint into the first subnet for the database connection 
+/*
 resource "azurerm_private_endpoint" "db_endpoint" {
   name                = "db-endpoint"
   location            = var.rg_region
@@ -11,3 +12,4 @@ resource "azurerm_private_endpoint" "db_endpoint" {
     is_manual_connection           = false
   }
 }
+*/
