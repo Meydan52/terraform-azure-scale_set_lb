@@ -70,34 +70,21 @@ variable "admin_password" {
   type        = string
   default     = "&*$867user34"
 }
-
-variable "canonical_name" {
-  description = "canonical user name"
+ 
+variable "image_source" {
+  description = "Golden image source"
   type        = string
-  default     = "canonical"
+  default     = ""
 }
 
-variable "UbuntuServer_name" {
-  description = "Server type"
+variable "computer_name" {
+  description = "SS VM name"
   type        = string
-  default     = "UbuntuServer"
-}
-variable "image_sku_name" {
-  description = "image_sku name"
-  type        = string
-  default     = "20.04-LTS"
+  default     = "testvmss"
 }
 
 variable "Standard_LRS_name" {
   description = "Standard_LRS name"
   type        = string
   default     = "Standard_LRS"
-}
-
-//////////////////// Traffic Manager  ////////////////
-
-variable "target_rs_id" {
-  description = "Traffic manager azure endpoint target resource id"
-  type        = string
-  default     = ""
 }
