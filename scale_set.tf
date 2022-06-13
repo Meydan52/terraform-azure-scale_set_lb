@@ -41,13 +41,14 @@ resource "azurerm_linux_virtual_machine_scale_set" "ss" {
     public_key = file("~/.ssh/id_rsa.pub")
   }
 */
+/*
   source_image_reference {
     publisher = var.canonical_name
     offer     = var.UbuntuServer_name
     sku       = var.image_sku_name
     version   = "latest"
   }
-
+*/
   os_disk {
     #create_option        = "FromImage"
     storage_account_type = var.Standard_LRS_name
