@@ -4,9 +4,7 @@ resource "azurerm_public_ip" "PublicIPForLB" {
   location            = var.rg_region
   resource_group_name = var.rg_name
   allocation_method   = "Static"
-  depends_on = [
-    azurerm_resource_group.terraform1
-  ]
+
 }
 
 resource "azurerm_lb" "wp_LoadBalancer" {
