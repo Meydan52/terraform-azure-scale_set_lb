@@ -49,7 +49,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ss" {
   }
 
   os_disk {
-    create_option        = "FromImage"
+    #create_option        = "FromImage"
     storage_account_type = var.Standard_LRS_name
     caching              = "ReadWrite"
   }
