@@ -1,12 +1,12 @@
 provider "azurerm" {
   features {}
 }
-
+/*
 resource "azurerm_resource_group" "terraform1" {
   name     = var.rg_name
   location = var.rg_region
 }
-
+*/
 resource "azurerm_linux_virtual_machine_scale_set" "ss" {
   name                            = var.ss_name
   resource_group_name             = var.rg_name
