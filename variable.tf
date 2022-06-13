@@ -70,7 +70,7 @@ variable "admin_password" {
   type        = string
   default     = "&*$867user34"
 }
- 
+
 variable "image_source" {
   description = "Golden image source"
   type        = string

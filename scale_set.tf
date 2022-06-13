@@ -29,7 +29,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ss" {
   location                        = azurerm_resource_group.terraform1.location
   sku                             = var.vm_sku
   instances                       = var.instance_number
-  computer_name_prefix            = "testvmss"
+  computer_name_prefix            = var.computer_name
   source_image_id                 = var.image_source
   admin_username                  = var.admin_user_name
   admin_password                  = var.admin_password
@@ -43,7 +43,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ss" {
 */
 
   os_disk {
-   
+
     storage_account_type = var.Standard_LRS_name
     caching              = "ReadWrite"
   }
