@@ -2,8 +2,8 @@
 
 resource "azurerm_network_security_group" "app_nsg" {
   name                = "app-nsg"
-  location            = azurerm_resource_group.terraform1.location
-  resource_group_name = azurerm_resource_group.terraform1.name
+  location            = var.rg_region
+  resource_group_name = var.rg_name
 
   # We are creating a rule to allow traffic on port 80
   security_rule {
@@ -54,8 +54,8 @@ resource "azurerm_subnet_network_security_group_association" "nsg_association" {
 /*
 resource "azurerm_network_security_group" "db_nsg" {
   name                = "db-nsg"
-  location            = azurerm_resource_group.terraform1.location
-  resource_group_name = azurerm_resource_group.terraform1.name
+  location            = var.rg_region
+  resource_group_name = var.rg_name
 
   # We are creating a rule to allow traffic on port 1433 for MYSQL
   security_rule {

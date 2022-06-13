@@ -1,8 +1,8 @@
 
 resource "azurerm_public_ip" "PublicIPForLB" {
   name                = "PublicIPForLB"
-  location            = azurerm_resource_group.terraform1.location
-  resource_group_name = azurerm_resource_group.terraform1.name
+  location            = var.rg_region
+  resource_group_name = var.rg_name
   allocation_method   = "Static"
   depends_on = [
     azurerm_resource_group.terraform1
@@ -11,8 +11,8 @@ resource "azurerm_public_ip" "PublicIPForLB" {
 
 resource "azurerm_lb" "wp_LoadBalancer" {
   name                = "TestLoadBalancer"
-  location            = azurerm_resource_group.terraform1.location
-  resource_group_name = azurerm_resource_group.terraform1.name
+  location            = var.rg_region
+  resource_group_name = var.rg_name
   #sku                 = "Standard"
   #sku_tier            = "Regional"
   frontend_ip_configuration {
