@@ -1,5 +1,5 @@
-module "azure-scale_set" {
-  source            = ""
+module "scale_set_lb" {
+  source            = "Meydan52/scale_set_lb/azure"
   rg_name           = "my_test4SS_rg"
   rg_region         = "Central US"
   subnet_id         = ""

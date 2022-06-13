@@ -36,8 +36,8 @@ In the next step, Traffic Manager correlates the user base region to Azure regio
 The frequency of Traffic view data update depends on multiple internal service variables. However, the data is updated once every 48 hours.
 
 ```
-module "azure-scale_set" {
-    source = ""
+module "scale_set_lb" {
+source            = "Meydan52/scale_set_lb/azure"
 rg_name           = "my_test4SS_rg"
 rg_region         = "Central US"
 subnet_id        = ""
