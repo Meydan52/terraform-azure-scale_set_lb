@@ -29,7 +29,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ss" {
   location                        = azurerm_resource_group.terraform1.location
   sku                             = var.vm_sku
   instances                       = var.instance_number
-  computer_name_prefix            = "test_vmss"
+  computer_name_prefix            = "testvmss"
   source_image_id                 = "/subscriptions/77333203-07cc-4166-ac0b-b786a47b8423/resourceGroups/StorageRG/providers/Microsoft.Compute/galleries/UbuntuApache1/images/targetUbuntu/versions/0.0.1"
   admin_username                  = var.admin_user_name
   admin_password                  = var.admin_password
