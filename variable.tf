@@ -88,3 +88,21 @@ variable "Standard_LRS_name" {
   type        = string
   default     = "Standard_LRS"
 }
+
+variable "vnet_id" {
+  description = "vnet id"
+  type        = string
+  default     = ""
+}
+
+variable "subnet_id" {
+  description = "vnet id"
+  type        = string
+  default     = ""
+}
+
+variable "db_resource_id" {
+  description = "Resource ID of the database"
+  type        = string
+  default     = ""
+}

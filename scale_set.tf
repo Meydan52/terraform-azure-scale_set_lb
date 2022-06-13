@@ -15,14 +15,14 @@ resource "azurerm_virtual_network" "terraform_vnet" {
   address_space       = var.vnet_ip
   # dns_servers         = ["10.0.0.4", "10.0.0.5"]
 }
-
+/*
 resource "azurerm_subnet" "subnet1" {
   name                 = var.subnet1_name
   resource_group_name  = azurerm_resource_group.terraform1.name
   virtual_network_name = azurerm_virtual_network.terraform_vnet.name
   address_prefixes     = var.subnet1_ip
 }
-
+*/
 resource "azurerm_linux_virtual_machine_scale_set" "ss" {
   name                            = var.ss_name
   resource_group_name             = azurerm_resource_group.terraform1.name
@@ -55,7 +55,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ss" {
     ip_configuration {
       name                                   = "${var.ss_name}-nic"
       primary                                = true
-      subnet_id                              = azurerm_subnet.subnet1.id
+      subnet_id                              = var.subnet_id
       load_balancer_backend_address_pool_ids = [azurerm_lb_backend_address_pool.scalesetpool.id]
     }
   }
